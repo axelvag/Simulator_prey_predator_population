@@ -1,8 +1,25 @@
-#
+# Simulator Prey Predator Population
+
+2 Environnements sont disponibles:
+
+CHAMPS:
+
+Au debut tout les insectes ont des couleurs aleatoires
 
 ![image](image/Insecte1.jpg)
+
+Apres quelques generations une couleur devient plus optimale pour moins etre visible et survivre 
+
 ![image](image/Insecte2.jpg)
+
+OCEANS:
+
+Idem ici ou les poissons ont des couleurs aleatoires au debut du programme
+
 ![image](image/Insecte3.jpg)
+
+Puis la couleur s'uniforme au bout de plusieurs generations d'individus
+
 ![image](image/Insecte4.jpg)
 
 # GrAPiC 
