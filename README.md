@@ -1,19 +1,19 @@
 # Simulator Prey Predator Population
 
-Mon objectif est de programmer un mini jeu où l’ordinateur « apprend » un camouflage pour
-une population d’insectes se faisant dévorer par votre souris 🖱️​. La phase d’apprentissage est une
-simulation de l’évolution génétique des gènes de couleur que pourrait faire une espèce
-d’insectes voulant maximiser ses chances de survie.
+My goal is to program a mini game where the computer “learns” a camouflage for
+a population of insects being devoured by your mouse 🖱️​. The learning phase is a
+simulation of the genetic evolution of color genes that a species could make
+insects wanting to maximize their chances of survival.
 
-2 Environnements sont disponibles:
+2 Environments are available:
 
-CHAMPS:
+FIELDS:
 
-Au debut tout les insectes ont des couleurs aleatoires
+At the beginning all insects have random colors
 
 ![image](image/Insecte1.jpg)
 
-Apres quelques generations une couleur devient plus optimale pour moins etre visible et survivre 
+After a few generations a color becomes more optimal to be less visible and survive
 
 ![image](image/Insecte2.jpg)
 
@@ -23,65 +23,65 @@ Idem ici ou les poissons ont des couleurs aleatoires au debut du programme
 
 ![image](image/Insecte3.jpg)
 
-Puis la couleur s'uniforme au bout de plusieurs generations d'individus
+Then the color becomes uniform after several generations of individuals
 
 ![image](image/Insecte4.jpg)
 
 # Play
 
-Choisissez l'environnement dans le menu en bas a gauche (vous pouvez en rajouter facilement dans le code).
+Choose the environment in the menu at the bottom left (you can easily add more in the code).
 
-Puis mettez votre souris 🖱️​ sur les particules de couleurs que vous voyez pour les effacer.
+Then put your mouse 🖱️​ on the colored particles you see to erase them.
 
-Une fois que vous n'en voyez plus appuyez sur Space ​⌨️​ pour creer une nouvelles generation d'insecte.
+Once you no longer see any, press Space ​⌨️​ to create a new generation of insects.
 
-Continuez jusqu'a voir quel couleur devient domminante !
+Continue until you see which color becomes dominant!
 
 # Subject
 
 ```
-1. Un insecte est représenté par une position (x,y), une couleur (r,g,b), un temps de naissance
-et une durée de vie. Une population d’insectes est représentée par un tableau de
-NB_INSECTS insectes et une image de fond représentant le paysage dans lequel les insectes
-vivent.
+1. An insect is represented by a position (x,y), a color (r,g,b), a birth time
+and a lifespan. A population of insects is represented by a table of
+NB_INSECTS insects and a background image representing the landscape in which the insects
+live.
 
-  Déclarez ces deux structures, ainsi qu’une structure Color munie des opérateurs
-  d’addition, de soustraction, de multiplication et de division par un réel.
+  Declare these two structures, as well as a Color structure with the operators
+  addition, subtraction, multiplication and division by a real number.
 
-2. Écrivez les deux procédures suivantes d’initialisation du monde des insectes.
+2. Write the following two procedures for initializing the insect world.
 
- void initInsect(SomeInsects& si, Color good, int range)
- - Initialise les insectes. Leur position est choisie au hasard. Leur couleur sera choisie
- au hasard dans un rayon range autour de la couleur good. Le champ de la durée de vie
- est initialisé à -1 : un chiffre négatif signifie que l’insecte est toujours vivant, un positif
- indique combien de temps il a vécu.
+ void initInsect(SomeInsects& if, Color good, int range)
+ - Initializes insects. Their position is chosen at random. Their color will be chosen
+ randomly in a radius around the color good. The field of lifespan
+ is initialized to -1: a negative number means that the insect is still alive, a positive
+ indicates how long he lived.
 
- void init(SomeInsects& si)
- - Initialise l’image du paysage et appelle la procédure qui initialise les insectes.
+ void init(SomeInsects& if)
+ - Initializes the landscape image and calls the procedure that initializes the insects.
 
-3. Écrivez la procédure draw qui prend en paramètre la population d’insectes et l’affiche, ainsi
-que l’image de paysage. Chaque insecte est un cercle plein de rayon 3 avec la couleur stockée
-dans la structure.
+3. Write the draw procedure which takes the insect population as a parameter and displays it, thus
+than the landscape image. Each insect is a solid circle of radius 3 with the color stored
+in the structure.
 
-4. Écrivez la procédure Update avec 2 aspects : mort d’un insecte (question 5), régénération de
-toute la population d’insectes (question 6).
+4. Write the Update procedure with 2 aspects: death of an insect (question 5), regeneration of
+the entire insect population (question 6).
 
-5. Les insectes dans un rayon de 20 pixels de la souris sont mangés. La souris est le prédateur.
-Un insecte mort n’est plus visible et aura son champ de durée de vie qui contiendra la durée
-qu’il a vécu avant de se faire manger par la souris. Utilisez :
- ElapsedTime() qui renvoie la durée depuis le lancement du programme.
+5. Insects within 20 pixels of the mouse are eaten. The mouse is the predator.
+A dead insect is no longer visible and will have its lifespan field which will contain the duration
+that he lived before being eaten by the mouse. Use:
+ ElapsedTime() which returns the duration since the program was launched.
 
-6. Une fois tous les insectes morts nous allons garder les insectes les mieux adaptés à leur
-environnement, et sélectionner leur couleur pour régénérer une population.
+6. Once all the insects are dead we will keep the insects best adapted to their
+environment, and select their color to regenerate a population.
 
- a. Écrivez la procédure minMaxLifeTime qui trouve la durée de vie minimale et la
- durée de vie maximale dans une population d’insectes.
+ a. Write the procedure minMaxLifeTime which finds the minimum life and the
+ maximum lifespan in an insect population.
 
- b. Écrivez la fonction averageColorOfGoodInsects qui calcule la couleur moyenne
- des insectes dont la durée de vie a été supérieure à une certaine durée.
+ b. Write the averageColorOfGoodInsects function that calculates the average color
+ insects whose lifespan has exceeded a certain duration.
 
- c. Dans une procédure update ajoutez du code qui régénère une nouvelle
- population avec une couleur mieux adaptée calculée par les questions a. et b.
+ c. In an update procedure add code that regenerates a new
+ population with a better suited color calculated by questions a. and B.
 
 ```
 
