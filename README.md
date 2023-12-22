@@ -37,6 +37,54 @@ Une fois que vous n'en voyez plus appuyez sur Space ​⌨️​ pour creer une 
 
 Continuez jusqu'a voir quel couleur devient domminante !
 
+# Subject
+
+```
+1. Un insecte est représenté par une position (x,y), une couleur (r,g,b), un temps de naissance
+et une durée de vie. Une population d’insectes est représentée par un tableau de
+NB_INSECTS insectes et une image de fond représentant le paysage dans lequel les insectes
+vivent.
+
+  Déclarez ces deux structures, ainsi qu’une structure Color munie des opérateurs
+  d’addition, de soustraction, de multiplication et de division par un réel.
+
+2. Écrivez les deux procédures suivantes d’initialisation du monde des insectes.
+
+ void initInsect(SomeInsects& si, Color good, int range)
+ - Initialise les insectes. Leur position est choisie au hasard. Leur couleur sera choisie
+ au hasard dans un rayon range autour de la couleur good. Le champ de la durée de vie
+ est initialisé à -1 : un chiffre négatif signifie que l’insecte est toujours vivant, un positif
+ indique combien de temps il a vécu.
+
+ void init(SomeInsects& si)
+ - Initialise l’image du paysage et appelle la procédure qui initialise les insectes.
+
+3. Écrivez la procédure draw qui prend en paramètre la population d’insectes et l’affiche, ainsi
+que l’image de paysage. Chaque insecte est un cercle plein de rayon 3 avec la couleur stockée
+dans la structure.
+
+4. Écrivez la procédure Update avec 2 aspects : mort d’un insecte (question 5), régénération de
+toute la population d’insectes (question 6).
+
+5. Les insectes dans un rayon de 20 pixels de la souris sont mangés. La souris est le prédateur.
+Un insecte mort n’est plus visible et aura son champ de durée de vie qui contiendra la durée
+qu’il a vécu avant de se faire manger par la souris. Utilisez :
+ ElapsedTime() qui renvoie la durée depuis le lancement du programme.
+
+6. Une fois tous les insectes morts nous allons garder les insectes les mieux adaptés à leur
+environnement, et sélectionner leur couleur pour régénérer une population.
+
+ a. Écrivez la procédure minMaxLifeTime qui trouve la durée de vie minimale et la
+ durée de vie maximale dans une population d’insectes.
+
+ b. Écrivez la fonction averageColorOfGoodInsects qui calcule la couleur moyenne
+ des insectes dont la durée de vie a été supérieure à une certaine durée.
+
+ c. Dans une procédure update ajoutez du code qui régénère une nouvelle
+ population avec une couleur mieux adaptée calculée par les questions a. et b.
+
+```
+
 # GrAPiC 
 
 ## Starting
