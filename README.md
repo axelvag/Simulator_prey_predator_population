@@ -85,6 +85,13 @@ environment, and select their color to regenerate a population.
 
 ```
 
+# Starting
+
+Clone this repo
+```
+$ git clone https://github.com/axelvag/Simulator_prey_predator_population
+```
+
 # GrAPiC 
 
 ## Starting
