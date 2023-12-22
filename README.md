@@ -1,5 +1,10 @@
 # Simulator Prey Predator Population
 
+Mon objectif est de programmer un mini jeu où l’ordinateur « apprend » un camouflage pour
+une population d’insectes se faisant dévorer par votre souris 🖱️​. La phase d’apprentissage est une
+simulation de l’évolution génétique des gènes de couleur que pourrait faire une espèce
+d’insectes voulant maximiser ses chances de survie.
+
 2 Environnements sont disponibles:
 
 CHAMPS:
@@ -21,6 +26,16 @@ Idem ici ou les poissons ont des couleurs aleatoires au debut du programme
 Puis la couleur s'uniforme au bout de plusieurs generations d'individus
 
 ![image](image/Insecte4.jpg)
+
+# Play
+
+Choisissez l'environnement dans le menu en bas a gauche (vous pouvez en rajouter facilement dans le code).
+
+Puis mettez votre souris 🖱️​ sur les particules de couleurs que vous voyez pour les effacer.
+
+Une fois que vous n'en voyez plus appuyez sur Space ​⌨️​ pour creer une nouvelles generation d'insecte.
+
+Continuez jusqu'a voir quel couleur devient domminante !
 
 # GrAPiC 
 
